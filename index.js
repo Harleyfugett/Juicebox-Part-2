@@ -10,15 +10,10 @@ server.use(morgan('dev'));
 server.use(express.json());
 
 server.use((req, res, next) => {
-    console.log("<____Body Logger START____>");
-    console.log(req.body);
-    console.log("<_____Body Logger END_____>");
-  
     next();
   });
 
 server.use('/api', (req, res, next) => {
-    console.log("A request was made to /api");
     next();
 });
   
